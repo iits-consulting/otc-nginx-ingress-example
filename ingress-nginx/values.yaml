@@ -1,0 +1,9 @@
+ingress-nginx:
+  controller:
+    # Will add custom configuration options to Nginx https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/configmap/
+    config: { }
+    replicaCount: 1
+    service:
+      externalTrafficPolicy: Cluster
+      annotations:
+        kubernetes.io/elb.id: "REPLACE_ME"

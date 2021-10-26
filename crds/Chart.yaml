@@ -1,0 +1,4 @@
+apiVersion: v2
+description: crds for our cluster
+name: crds
+version: 2.42.0-6aab4ef2895c3e4e9db9ff5b8216f94ec1dfa3a7

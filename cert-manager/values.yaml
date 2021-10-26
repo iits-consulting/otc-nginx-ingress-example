@@ -1,0 +1,10 @@
+cert-manager:
+  podDnsPolicy: "None"
+  podDnsConfig:
+    nameservers:
+      - "8.8.8.8"
+elbID: "REPLACE_ME"
+ingressClass: nginx
+clusterIssuer:
+  http:
+    name: letsencrypt-prod

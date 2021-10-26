@@ -1,0 +1,8 @@
+apiVersion: v2
+dependencies:
+  - name: registry-creds
+    repository: https://iits-consulting.github.io/registry-creds-chart/
+    version: 1.0.4
+description: registry-creds
+name: registry-creds
+version: 1.0.0

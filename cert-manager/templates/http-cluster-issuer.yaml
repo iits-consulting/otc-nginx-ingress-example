@@ -1,0 +1,26 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: {{.Values.clusterIssuer.http.name}}
+spec:
+  acme:
+    # You must replace this email address with your own.
+    # Let's Encrypt will use this to contact you about expiring
+    # certificates, and issues related to your account.
+    email: "REPLACE_ME"
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      # Secret resource that will be used to store the account's private key.
+      name: {{.Values.clusterIssuer.http.name}}
+    # Add a single challenge solver, HTTP01 using nginx
+    solvers:
+      - http01:
+          ingress:
+            class: {{.Values.ingressClass}}
+            ingressTemplate:
+              metadata:
+                annotations:
+                  "cert-manager.io/issue-temporary-certificate": "true"
+                  "kubernetes.io/elb.id": {{ .Values.elbID }}
+                  "kubernetes.io/ingress.class": {{.Values.ingressClass}}
+                  "certmanager.k8s.io/cluster-issuer": {{.Values.clusterIssuer.http.name}}

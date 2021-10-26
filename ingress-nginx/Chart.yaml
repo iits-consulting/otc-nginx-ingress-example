@@ -1,0 +1,8 @@
+apiVersion: v2
+dependencies:
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 3.23.0
+description: ingress-nginx
+name: ingress-nginx
+version: 0.1.1-edd511f03ae2461b13f1a05f177439d2420da20f
