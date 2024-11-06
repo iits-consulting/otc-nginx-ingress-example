@@ -1,4 +1,4 @@
-Demo for a very simple nginx setup withing one hour.
+Demo for a very simple nginx setup withing one hour according to this [guide](https://community.open-telekom-cloud.com/community?id=community_blog&sys_id=08f3fb40132c0190d15ac969a674412b&view_source=searchResult)
 
 Please follow this steps on OTC.
 
